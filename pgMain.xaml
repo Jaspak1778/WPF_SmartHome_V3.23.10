@@ -1,0 +1,30 @@
+﻿<Page x:Class="WPF_SmartHome_V3._23._10.pgMain"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPF_SmartHome_V3._23._10"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="pgMain"
+      ShowsNavigationUI="False">
+    <Page.Background>
+        <ImageBrush ImageSource="/Smart_Home.jpg"/>
+    </Page.Background>
+
+    <Grid x:Name="grMain">
+        <Border x:Name="Border1" CornerRadius="8" Margin="0,12,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="85" Width="107" Background="LightSkyBlue"/>
+        <Border x:Name="Border2" CornerRadius="8" Margin="0,99,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="85" Width="107" Background="LightSkyBlue"/>
+        <Border x:Name="Border3" CornerRadius="8" Margin="0,187,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="85" Width="107" Background="LightSkyBlue"/>
+        <Border x:Name="Border5" CornerRadius="8" Margin="0,276,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="85" Width="107" Background="LightSkyBlue"/>
+        <Button x:Name="btnLukitus" Content="Lukitus" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,16,0,0" Height="76" Width="100" FontSize="18" Background="LightSkyBlue" BorderBrush="{x:Null}" Click="btnLukitus_Click" />
+        <Button x:Name="btnLammitys" Content="Lämmitys" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,103,0,0" Height="76" Width="100" FontSize="18" Background="LightSkyBlue" BorderBrush="{x:Null}" Click="btnLammitys_Click"  />
+        <Button x:Name="btnValot" Content="Valaistus" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,191,0,0" Height="76" Width="100" FontSize="18" Background="LightSkyBlue" BorderBrush="{x:Null}" Click="btnValot_Click"  />
+        <Button x:Name="btnSauna" Content="Sauna"  HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,280,0,0" Height="76" Width="100" FontSize="18" Background="LightSkyBlue" BorderBrush="{x:Null}" Click="btnSauna_Click" />
+        <Label Content="Smart Home APP V1" HorizontalAlignment="Left" Margin="245,88,0,0" VerticalAlignment="Top" Width="245" Height="52" FontSize="25" FontStyle="Italic" FontFamily="Cambria Math" FontWeight="Bold" Foreground="#FF1999C5">
+            <Label.Background>
+                <SolidColorBrush Color="#FF030403" Opacity="0.2"/>
+            </Label.Background>
+        </Label>
+    </Grid>
+</Page>

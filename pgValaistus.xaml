@@ -1,0 +1,160 @@
+﻿<Page x:Class="WPF_SmartHome_V3._23._10.pgValaistus"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPF_SmartHome_V3._23._10"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="pgValaistus">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Lights.jpg"/>
+        </Grid.Background>
+        <Border x:Name="Border1" CornerRadius="8" Margin="667,1,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="85" Width="107" Background="LightSkyBlue"/>
+        <Button x:Name="btnPaaValikko" Content="Takaisin" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="670,5,0,0" Height="76" Width="100" FontSize="18" Background="LightSkyBlue" BorderBrush="{x:Null}" Click="btnPaavalikko_Click" />
+        <Border x:Name="brdAsetukset" CornerRadius="8" HorizontalAlignment="Left" Margin="230,16,0,0" VerticalAlignment="Top" Height="54" Width="285" Background="LightSkyBlue"/>
+        <Label Content="Kodin valaistus asetukset" HorizontalAlignment="Left" Margin="242,20,0,0" VerticalAlignment="Top" Width="261" Height="46" FontSize="22">
+
+        </Label>
+
+
+
+        <!--ETEINEN-->
+
+
+        <Border x:Name="BorderVE" CornerRadius="8" Margin="122,90,0,0" 
+                HorizontalAlignment="Left" VerticalAlignment="Top" 
+                Height="115" Width="225" 
+                Background="LightSkyBlue">
+            <Slider x:Name="sldrET"
+                Maximum="100" Minimum="0"
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" 
+                Width="200" Height="35" 
+                ValueChanged="ETSlider_ValueChanged" 
+                Background="LightSkyBlue" 
+                Foreground="#FFF4F4F4"
+                
+                Margin="15,65,0,0"
+                
+                />
+        </Border>
+        <Label x:Name="ETtilatie" Content="Pois" HorizontalAlignment="Left" Margin="247,98,0,0" VerticalAlignment="Top" Height="25" Width="80"/>
+        <Label x:Name="lblValotET" Content="Eteinen" Margin="137,98,0,0"
+               HorizontalAlignment="Left" VerticalAlignment="Top"
+               Height="25" Width="80"
+               />
+
+        <TextBox x:Name="txtValotET" 
+                 HorizontalAlignment="Left" 
+                 Margin="137,128,0,0" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Width="55" Height="20" Text="0 %"
+                 />
+
+        <!--OLOHUONE-->
+
+        <Border x:Name="BorderOH" CornerRadius="8" Margin="387,90,0,0" 
+            HorizontalAlignment="Left" VerticalAlignment="Top" 
+            Height="115" Width="225" 
+            Background="LightSkyBlue">
+            <Slider x:Name="sldrOH"
+                
+                Maximum="100" Minimum="0"
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" 
+                Width="200" Height="35" 
+                ValueChanged="OHSlider_ValueChanged" 
+                Background="LightSkyBlue" 
+                Foreground="#FFF4F4F4"
+                Margin="15,65,0,0"
+                />
+        </Border>
+        <Label x:Name="OHtilatie" Content="Pois" HorizontalAlignment="Left" Margin="497,98,0,0" VerticalAlignment="Top" Height="25" Width="80"/>
+        <Label x:Name="lblValotOH" Content="Olohuone" Margin="402,98,0,0"
+            HorizontalAlignment="Left" VerticalAlignment="Top"
+            Height="25" Width="80"
+               />
+        <TextBox x:Name="txtValotOH" 
+            HorizontalAlignment="Left" 
+            Margin="402,128,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Width="55" Height="20" Text="0 %"
+            />
+
+        <!--KEITTIÖ-->
+
+        <Border x:Name="BorderVK" CornerRadius="8" Margin="122,240,0,0" 
+            HorizontalAlignment="Left" VerticalAlignment="Top" 
+            Height="115" Width="225" 
+            Background="LightSkyBlue">
+            <Slider x:Name="sldrKE"
+                Maximum="100" Minimum="0"
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" 
+                Width="200" Height="35" 
+                ValueChanged="KESlider_ValueChanged" 
+                Background="LightSkyBlue" 
+                Foreground="#FFF4F4F4"
+                
+                Margin="15,65,0,0"
+                
+                />
+
+        </Border>
+        <Label x:Name="KEtilatie" Content="Pois" HorizontalAlignment="Left" Margin="247,245,0,0" VerticalAlignment="Top" Height="25" Width="80"/>
+        <Label x:Name="lblValotKE" Content="Keittiö" Margin="137,245,0,0"
+            HorizontalAlignment="Left" VerticalAlignment="Top"
+            Height="25" Width="80"
+               />
+        <TextBox x:Name="txtValotKE" 
+            HorizontalAlignment="Left" 
+            Margin="137,275,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Width="55" Height="20" Text="0 %"
+            />
+
+        <!--MAKUUHUONE-->
+
+        <Border x:Name="BorderVM" CornerRadius="8" Margin="392,240,0,0" 
+            HorizontalAlignment="Left" VerticalAlignment="Top" 
+            Height="115" Width="226" 
+            Background="LightSkyBlue">
+
+            <Slider x:Name="sldrMH"
+                Maximum="100" Minimum="0"
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" 
+                Width="200" Height="35" 
+                ValueChanged="MHSlider_ValueChanged" 
+                Background="LightSkyBlue" 
+                Foreground="#FFF4F4F4"
+                
+                Margin="15,65,0,0"
+                
+                />
+
+        </Border>
+        <Label x:Name="MHtilatie" Content="Pois" HorizontalAlignment="Left" Margin="497,245,0,0" VerticalAlignment="Top" Height="25" Width="80"/>
+        <Label x:Name="lblValotMH" Content="Makuuhuone" Margin="400,245,0,0"
+            HorizontalAlignment="Left" VerticalAlignment="Top"
+            Height="25" Width="80"
+               />
+        <TextBox x:Name="txtValotMH" 
+            HorizontalAlignment="Left" VerticalAlignment="Top"
+            Margin="400,275,0,0" 
+            TextWrapping="Wrap" 
+            
+            Width="55" Height="20" Text="0 %"
+            />
+
+
+
+
+    </Grid>
+</Page>
