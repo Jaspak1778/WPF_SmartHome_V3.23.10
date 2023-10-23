@@ -40,9 +40,21 @@ namespace WPF_SmartHome_V3._23._10
             Thermostat.Huoneistolämpö = Kylpyhuone.HuoneOloarvo;
 
         }
+        private void btnPaavalikko_Click(object sender, RoutedEventArgs e)          // Takaisin päävalikkoon
+        {
+
+            Write_settings(Asuintilat.HaluttuLampotila, 7);
+            Write_settings(Kylpyhuone.HaluttuLampotila, 8);
+            Write_settings(Makuuhuone.HaluttuLampotila, 9);
+            Thermostat.Huoneistolämpö = Kylpyhuone.HuoneOloarvo;
+            Temp.Stop();
+            MainWindow.FirstRun = false;
+
+            this.NavigationService.GoBack();
+        }
         private void TempSimulation(object sender, EventArgs e)
         {   
-            //Ajastin on päällä kun sivu on ajossa.
+                                                                                    //Ajastin on päällä kun sivu on ajossa.
             //Asuintilat
             if (Asuintilat.HuoneOloarvo < Asuintilat.HaluttuLampotila)
                 Asuintilat.NostaLampoa();
@@ -72,7 +84,7 @@ namespace WPF_SmartHome_V3._23._10
                 TempDisplay();
 
         }
-        public void TempDisplay()
+        public void TempDisplay()                                                           //Lämpötila arvojen näyttämistä varten.
         { 
             txtASLAsetus.Text = Asuintilat.HaluttuLampotila.ToString();
             txtMHLAsetus.Text = Makuuhuone.HaluttuLampotila.ToString();
@@ -83,17 +95,8 @@ namespace WPF_SmartHome_V3._23._10
             txtKHNykyinen.Text = Kylpyhuone.HuoneOloarvo.ToString();
         }
 
-        private void btnPaavalikko_Click(object sender, RoutedEventArgs e)
-        {
-            
-            Write_settings(Asuintilat.HaluttuLampotila, 7);
-            Write_settings(Kylpyhuone.HaluttuLampotila, 8);
-            Write_settings(Makuuhuone.HaluttuLampotila, 9);
-            Thermostat.Huoneistolämpö = Kylpyhuone.HuoneOloarvo;
-            Temp.Stop();
-            this.NavigationService.GoBack();
-        }
-        private void btnASLisaa_Click(object sender, RoutedEventArgs e)
+        
+        private void btnASLisaa_Click(object sender, RoutedEventArgs e)                     //Huonekohtaiset lämpötila kontrollit rajoitettu +17 ja 25c välille 
         {
             if (Asuintilat.HaluttuLampotila < 25)
             {

@@ -32,7 +32,7 @@ namespace WPF_SmartHome_V3._23._10
             CheckDoorStatus();
         }
         
-        public void btnPaavalikko_Click(object sender, RoutedEventArgs e)
+        public void btnPaavalikko_Click(object sender, RoutedEventArgs e)   //Extra toiminnallisuus
         {
             Write_settings(koti.Etuovi_lukittu, 0);
             Write_settings(koti.Takaovi_lukittu, 1);

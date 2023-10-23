@@ -17,12 +17,19 @@
         <Label Content="Sauna" HorizontalAlignment="Left" Margin="355,24,0,0" VerticalAlignment="Top" Width="74" Height="46" FontSize="22"/>
 
         <Border x:Name="Border1" CornerRadius="8" Margin="667,1,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="85" Width="107" Background="LightSkyBlue"/>
-        <Border x:Name="brdBorderA1" CornerRadius="8" HorizontalAlignment="Left" Margin="295,125,0,0" VerticalAlignment="Top" Height="125" Width="220" Background="LightSkyBlue" />
+        <Border x:Name="brdBorderA1" CornerRadius="8" HorizontalAlignment="Left" VerticalAlignment="Top" Height="130" Width="210" Background="LightSkyBlue" Margin="275,115,0,0" />
         <Button x:Name="btnPaaValikko" Content="Takaisin" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="670,5,0,0" Height="76" Width="100" FontSize="18" Background="LightSkyBlue" BorderBrush="{x:Null}" Click="btnPaavalikko_Click" />
-        <Button x:Name="SanaON" Content="Sauna ON" HorizontalAlignment="Left" Margin="380,185,0,0" VerticalAlignment="Top" Height="50" Width="60" Click="SanaON_Click"/>
-        <Button x:Name="SaunaOFF" Content="Sauna OFF" HorizontalAlignment="Left" Margin="310,185,0,0" VerticalAlignment="Top" Height="50" Width="60" Click="SaunaOFF_Click"/>
-        <TextBox x:Name="txtTilaTieto" Text="Sauna pois" HorizontalAlignment="Left" Margin="355,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" Height="30"/>
-        <TextBox x:Name="txtLampotila" HorizontalAlignment="Left" Margin="450,185,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button x:Name="SanaON" Content="Sauna ON" HorizontalAlignment="Left" Margin="360,180,0,0" VerticalAlignment="Top" Height="50" Width="60" Click="SanaON_Click"/>
+        <Button x:Name="SaunaOFF" Content="Sauna OFF" HorizontalAlignment="Left" Margin="290,180,0,0" VerticalAlignment="Top" Height="50" Width="65" Click="SaunaOFF_Click"/>
+        <TextBox x:Name="txtTilaTieto" Text="Sauna pois" HorizontalAlignment="Left" Margin="319,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" Height="30" FontSize="16"/>
+        <Label x:Name="txtLampotila" HorizontalAlignment="Left"  Content="20" VerticalAlignment="Top" Width="40" Height="30" FontFamily="Yamaha EBM10 Bold" Margin="432,190,0,0" FontSize="22" Foreground="#FFC60F0F">
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FF0BB1E9" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
 
     </Grid>
 </Page>
